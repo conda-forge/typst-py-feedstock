@@ -1,6 +1,6 @@
 {% set name = "typst-py" %}
 {% set pypi_name = "typst" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/typst-{{ version }}.tar.gz
-  sha256: c46f0581cd312905618ae3573737e025a5c521ca810c83c9ebb2ba7994f04ad3
+  sha256: ad0d52a749afbba12ac8c59f44a760f59aff0d01471093ad6b3e8f1c3c55c186
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -27,6 +27,7 @@ requirements:
     - pip
   run:
     - python
+    - importlib-resources  # [py<39]
 
 test:
   imports:
