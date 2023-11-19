@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python
-    - importlib-resources  # [py<9]
+    - importlib-resources  # [py<39]
 
 test:
   imports:
