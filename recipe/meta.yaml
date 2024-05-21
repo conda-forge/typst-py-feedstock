@@ -1,6 +1,6 @@
 {% set name = "typst-py" %}
 {% set pypi_name = "typst" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/typst-{{ version }}.tar.gz
-  sha256: 714c2bc6f99246a6939a67017c84f1dabad7ceede79b35d7daac57d4339cabd6
+  sha256: 56a336fef1dbec6ae678d87d680a90ad07c8739bc0599b54fdd7fa351a4efa56
 
 build:
   number: 0
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - maturin                             # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
