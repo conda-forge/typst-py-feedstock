@@ -1,4 +1,0 @@
-# Rust 1.80 breaks Typist 0.11.1.
-# Remove this for Typist 0.12
-rust_compiler_version:
-  - 1.79.0
