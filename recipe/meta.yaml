@@ -1,6 +1,6 @@
 {% set name = "typst-py" %}
 {% set pypi_name = "typst" %}
-{% set version = "0.14.2" %}
+{% set version = "0.14.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/typst-{{ version }}.tar.gz
-  sha256: 6e300ae352b1c8534fa8235adb602202c8d61c240c5255d73611d10ff2934512
+  sha256: d0e4be6e26d8b3af72dc0178c218ccadcfef2de435c4f3af61079def5b5dfa21
 
 build:
   number: 0
