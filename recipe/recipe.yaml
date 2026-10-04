@@ -12,7 +12,7 @@ source:
   sha256: a60231b55f0a793c2401b26577522dbf7528207407b383de3a7f0cf7fd3ce28a
 
 build:
-  number: 1
+  number: 2
   # only build for the minimal python version
   skip: is_abi3 and not is_python_min
   python:
