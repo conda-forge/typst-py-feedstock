@@ -1,18 +1,20 @@
 schema_version: 1
 
 context:
-  version: "0.15.0"
+  version: "0.15.1"
 
 package:
   name: typst-py
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/t/typst/typst-${{ version }}.tar.gz
-  sha256: a60231b55f0a793c2401b26577522dbf7528207407b383de3a7f0cf7fd3ce28a
+  # Building from the GitHub source as 0.15.1 was not published to PyPI.
+  # Switch back to PyPI once https://github.com/messense/typst-py/issues/174 is resolved.
+  url: https://github.com/messense/typst-py/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: b924864f552326fefcdf75d30d30c0b8dec15f35042cf912a4253d7f847e09b1
 
 build:
-  number: 2
+  number: 0
   # only build for the minimal python version
   skip: is_abi3 and not is_python_min
   python:
